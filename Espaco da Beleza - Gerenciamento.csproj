@@ -1,0 +1,360 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{FD221A38-F392-4867-A316-B869096BA9FF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Espaco_da_Beleza_Gerenciamento</RootNamespace>
+    <AssemblyName>Espaco da Beleza_Gerenciamento</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu_UI_v1.5.3, Version=1.5.3.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\InnerVisual-Bunifu_UI_v1.5.3 Crack\InnerVisual-Bunifu_UI_v1.5.3 Crack\Bunifu_UI_v1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportViewer.Runtime.Common.12.0.2402.15\lib\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=12.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.VisualBasic" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Dao\Conexao.cs" />
+    <Compile Include="Dao\LoginDaoComandos.cs" />
+    <Compile Include="Model\Controle.cs" />
+    <Compile Include="View\Adicionar Horário.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar Horário.Designer.cs">
+      <DependentUpon>Adicionar Horário.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Agendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Agendamento.Designer.cs">
+      <DependentUpon>Agendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Backup.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Backup.Designer.cs">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Confirmação de Saida.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Confirmação de Saida.Designer.cs">
+      <DependentUpon>Confirmação de Saida.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Controle de Clientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Controle de Clientes.Designer.cs">
+      <DependentUpon>Controle de Clientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dao\BancoSQL.cs" />
+    <Compile Include="DsEBGerenciamento.cs">
+      <DependentUpon>DsEBGerenciamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DsEBGerenciamento.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DsEBGerenciamento.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="View\Esqueci Minha Senha.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Esqueci Minha Senha.Designer.cs">
+      <DependentUpon>Esqueci Minha Senha.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Estoque.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\.Designer.cs">
+      <DependentUpon>Estoque.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Adicionar Produtos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Adicionar Produtos.Designer.cs">
+      <DependentUpon>Adicionar Produtos.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\RptAgendamento.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\RptAgendamento.Designer.cs">
+      <DependentUpon>RptAgendamento.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sobre.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sobre.Designer.cs">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Splash Screen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Splash Screen.Designer.cs">
+      <DependentUpon>Splash Screen.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Adicionar Horário.resx">
+      <DependentUpon>Adicionar Horário.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Agendamento.resx">
+      <DependentUpon>Agendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Backup.resx">
+      <DependentUpon>Backup.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Confirmação de Saida.resx">
+      <DependentUpon>Confirmação de Saida.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Controle de Clientes.resx">
+      <DependentUpon>Controle de Clientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Esqueci Minha Senha.resx">
+      <DependentUpon>Esqueci Minha Senha.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Estoque.resx">
+      <DependentUpon>Estoque.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Adicionar Produtos.resx">
+      <DependentUpon>Adicionar Produtos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\RptAgenda.rdlc" />
+    <EmbeddedResource Include="View\RptAgendamento.resx">
+      <DependentUpon>RptAgendamento.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sobre.resx">
+      <DependentUpon>Sobre.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Splash Screen.resx">
+      <DependentUpon>Splash Screen.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DsEBGerenciamento.xsc">
+      <DependentUpon>DsEBGerenciamento.xsd</DependentUpon>
+    </None>
+    <None Include="DsEBGerenciamento.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DsEBGerenciamento.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="DsEBGerenciamento.xss">
+      <DependentUpon>DsEBGerenciamento.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu.png" />
+    <None Include="Resources\Fechar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maximizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Minimizar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agenda.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Icone.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Lupa.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produtos.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\App Icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Menu Opções.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Configuração.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Relogio.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Alarme.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Splash Screen.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Exclamação.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Cadeado1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Log-Out.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Procurar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adicionar Cliente.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clientes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Agendamento1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Produtos1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\TechnoTrab.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Adicionar Cliente1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calendario.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Mostrar.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Esconder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Espaço Da Beleza - Logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Reporte.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Backup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Circulo Menu.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\BackupPadrão.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\GerarBackup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CarregarBackup.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculadora.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Calculadora Icone.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
